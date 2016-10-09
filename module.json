@@ -1,0 +1,9 @@
+{
+	"name": "LostandFound",
+	"slug": "LAF",
+	"namespace": "Lostandfound",
+	"version": "0.1beta",
+	"author": "Redrock Team @2016",
+	"license": "MIT",
+	"description": "失物招领移动端，小帮手产品"
+}
