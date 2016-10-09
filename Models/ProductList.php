@@ -10,7 +10,7 @@ class ProductList extends Model
     /**
      * @inheritDoc
      */
-    protected $connection = 'localhost';
+    protected $connection = 'laf';
 
     /**
      * @inheritDoc
