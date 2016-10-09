@@ -11,8 +11,14 @@
 |
 */
 
-Route::group(['prefix' => 'laf', 'middleware' => 'laf.weixin'], function() {
+Route::group(['prefix' => 'laf'], function() {
 	Route::get('/view/{theme}/{category?}/{page?}', 'CoreController@view');
 	Route::get('/detail/{product}', 'CoreController@detail')->where('product', '\d+');
 	Route::post('/create', 'CoreController@create');
+});
+
+Route::group(['prefix' => 'lostandfound', 'middleware' => 'laf.weixin'], function() {
+	Route::get('/lost', function () { return view('laf::lost'); });
+	Route::get('/issue', function () { return view('laf::issue'); });
+	Route::post('/found', function () { return view('laf::found'); });
 });
