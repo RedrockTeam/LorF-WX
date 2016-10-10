@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
 	<title>失物招领-详细信息</title>
-	<link rel="stylesheet" href="static/css/detail.css">
+	<link rel="stylesheet" href="/lostandfound/css/detail.css">
 </head>
 <body>
 	<p class = "baseInfo">
