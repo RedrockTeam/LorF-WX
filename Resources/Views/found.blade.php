@@ -27,15 +27,15 @@
     </nav>
     <div id = content></div>
     <footer>
-      <a href = "/lost" class="bottomNav">
+      <a href = "/lostandfound/lost" class="bottomNav">
         <img src="/lostandfound/img/found_g.png" alt=".">
         <span>寻物启事</span>
       </a>
-      <a href = "/issue" class="bottomNav">
+      <a href = "/lostandfound/issue" class="bottomNav">
         <img src="/lostandfound/img/issue_g.png" alt=".">
         <span>发布消息</span>
       </a>
-      <a href = "/found" class="bottomNav" style = "color: #14A8FD;">
+      <a href = "/lostandfound/found" class="bottomNav" style = "color: #14A8FD;">
         <img src="/lostandfound/img/lost.png" alt=".">
         <span>招领启事</span>
       </a>
