@@ -18,7 +18,7 @@ Route::group(['prefix' => 'laf'], function() {
 });
 
 Route::group(['prefix' => 'lostandfound', 'middleware' => 'laf.weixin'], function() {
-	Route::get('/lost', function () { return view('laf::lost'); });
-	Route::get('/issue', function () { return view('laf::issue'); });
-	Route::post('/found', function () { return view('laf::found'); });
+	Route::get('/lost', function () { return view('LAF::lost'); });
+	Route::get('/issue', function () { return view('LAF::issue'); });
+	Route::post('/found', function () { return view('LAF::found'); });
 });
