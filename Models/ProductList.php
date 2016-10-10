@@ -87,7 +87,7 @@ class ProductList extends Model
             $this->setAttribute($key, $value);
 
         $this->setAttribute('connect_name', $user['nickname']);
-        $this->setAttribute('wx_avatar', $user['headimgurl']);
+        $this->setAttribute('wx_avatar', $information['lost_or_found'] ? '/lostandfound/img/avatar.jpg' : $user['headimgurl']);
 
         $this->setCreatedAt(Carbon::now());
 
