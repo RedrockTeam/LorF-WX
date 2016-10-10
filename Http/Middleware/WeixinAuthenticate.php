@@ -39,6 +39,12 @@ class WeixinAuthenticate
     protected $state = '';
 
     /**
+     * 跳转域名
+     * @var string
+     */
+    protected $domain = 'http://hongyan.cqupt.edu.cn';
+
+    /**
      * Handle an incoming request.
      *
      * @param  \Illuminate\Http\Request $request
@@ -86,7 +92,7 @@ class WeixinAuthenticate
 
             $oauth2 = $this->baseOAUTH . '?' . $this->build_query([
                 'appid' => $config['appid'],
-                'redirect_uri' => $request->fullUrl(),
+                'redirect_uri' => $this->domain . $request->getRequestUri(),
                 'response_type' => 'code',
                 'scope' => $this->scope,
                 'state' => $this->state
@@ -145,7 +151,7 @@ class WeixinAuthenticate
     {
         $queries = array_except($request->query(), ['code', 'state']);
 
-        return $request->url().(empty($queries) ? '' : '?' . $this->build_query($queries));
+        return $this->domain . '/' . $request->path() . (empty($queries) ? '' : '?' . $this->build_query($queries));
     }
 
     private function build_query(array $data)
