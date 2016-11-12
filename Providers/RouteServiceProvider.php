@@ -26,6 +26,7 @@ class RouteServiceProvider extends ServiceProvider
 
 		// 导入中间件
 		$router->middleware('laf.weixin', \App\Modules\LAF\Http\Middleware\WeixinAuthenticate::class);
+        $router->middleware('laf.mobile', \App\Modules\LAF\Http\Middleware\WeixinMockBypass::class);
 	}
 
 	/**

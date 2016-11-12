@@ -1,7 +1,7 @@
 {
 	"name": "LostandFound",
-	"slug": "LAF",
-	"namespace": "Lostandfound",
+	"slug": "laf",
+	"namespace": "LAF",
 	"version": "0.1beta",
 	"author": "Redrock Team @2016",
 	"license": "MIT",

@@ -12,6 +12,15 @@
 */
 
 Route::group(['prefix' => 'laf'], function() {
+
+    Route::group(['prefix' => 'api', 'middleware' => 'laf.mobile'], function () {
+        Route::get('/view/{theme}/{category?}/{page?}', 'CoreController@view');
+        Route::get('/detail/{product}', function (Request $request, $product) {
+            return response()->json((new \App\Modules\LAF\Models\ProductList())->getDetailByProductId($product), 200);
+        })->where('product', '\d+');
+        Route::post('/create', 'CoreController@create');
+    });
+
 	Route::get('/view/{theme}/{category?}/{page?}', 'CoreController@view');
 	Route::get('/detail/{product}', 'CoreController@detail')->where('product', '\d+');
 	Route::post('/create', 'CoreController@create');

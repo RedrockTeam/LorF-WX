@@ -87,6 +87,9 @@ class CoreController extends Controller
 
         $user = $request->session()->get('weixin.user');
 
+        if (!isset($user['nickname']) || $user['nickname'] === '')
+            return response()->json(['status' => '信息不完整, 请刷新页面。'], 403);
+
         if ((new ProductList())->setLostOrFoundTips($information, $user))
             return response()->json(['status' => '成功添加失物招领信息'], 200);
     }
